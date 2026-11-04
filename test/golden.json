@@ -1,0 +1,616 @@
+{
+ "python": "3.12.3",
+ "cases": [
+  {
+   "name": "파일 읽기",
+   "output": "📢 오늘도 맛있게 드세요!",
+   "error": null
+  },
+  {
+   "name": "없는 파일",
+   "output": "",
+   "error": {
+    "type": "FileNotFoundError",
+    "msg": "[Errno 2] No such file or directory: '없는.txt'",
+    "line": 1
+   }
+  },
+  {
+   "name": "빈 파일 이름",
+   "output": "",
+   "error": {
+    "type": "FileNotFoundError",
+    "msg": "[Errno 2] No such file or directory: ''",
+    "line": 1
+   }
+  },
+  {
+   "name": "FileNotFoundError 잡기",
+   "output": "없음\n끝",
+   "error": null
+  },
+  {
+   "name": "readline · readlines",
+   "output": "첫째\n['둘째\\n', '셋째\\n']",
+   "error": null
+  },
+  {
+   "name": "except 순서",
+   "output": "I\n계속",
+   "error": null
+  },
+  {
+   "name": "잡히지 않는 종류",
+   "output": "",
+   "error": {
+    "type": "KeyError",
+    "msg": "'b'",
+    "line": 2
+   }
+  },
+  {
+   "name": "int 여러 꼴",
+   "output": "7\n8\nX\nX\nX",
+   "error": null
+  },
+  {
+   "name": "나누기",
+   "output": "3 3.5",
+   "error": {
+    "type": "ZeroDivisionError",
+    "msg": "integer division or modulo by zero",
+    "line": 2
+   }
+  },
+  {
+   "name": "raise 잡지 않음",
+   "output": "",
+   "error": {
+    "type": "ValueError",
+    "msg": "음수는 안 돼요",
+    "line": 3
+   }
+  },
+  {
+   "name": "raise 잡기 · as e",
+   "output": "잡음: 0~4번만\n계속",
+   "error": null
+  },
+  {
+   "name": "파이썬 예외의 e",
+   "output": "invalid literal for int() with base 10: '칠'",
+   "error": null
+  },
+  {
+   "name": "raise 뒤 글자",
+   "output": "",
+   "error": {
+    "type": "TypeError",
+    "msg": "exceptions must derive from BaseException",
+    "line": 1
+   }
+  },
+  {
+   "name": "예외를 만들기만",
+   "output": "지나감",
+   "error": null
+  },
+  {
+   "name": "raise 아래 줄",
+   "output": "하나\n잡음 'x'",
+   "error": null
+  },
+  {
+   "name": "함수 안 raise",
+   "output": "1 이상\n3",
+   "error": null
+  },
+  {
+   "name": "나만의 예외",
+   "output": "잡음: 콜라 품절",
+   "error": {
+    "type": "품절에러",
+    "msg": "또 품절",
+    "line": 7
+   }
+  },
+  {
+   "name": "나머지 연산",
+   "output": "3 0 1",
+   "error": null
+  },
+  {
+   "name": "자판기 · 번호에 「칠」",
+   "output": "숫자를 정확히 입력하세요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "자판기 · 번호에 「2.5」",
+   "output": "숫자를 정확히 입력하세요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "자판기 · 사람 수에 「둘」",
+   "output": "숫자를 정확히 입력하세요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "자판기 · 번호 7",
+   "output": "0~4번 중에서 골라 주세요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "자판기 · 번호 100",
+   "output": "0~4번 중에서 골라 주세요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "자판기 · 쿠폰 「happy」",
+   "output": "없는 쿠폰이에요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "자판기 · 쿠폰 「BONUS」",
+   "output": "없는 쿠폰이에요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "자판기 · 쿠폰 「FREE」",
+   "output": "이 쿠폰은 지금 쓸 수 없어요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "자판기 · 사람 수 0",
+   "output": "0명은 나눠 낼 수 없어요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "자판기 · 번호 칸을 비움",
+   "output": "숫자를 정확히 입력하세요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "자판기 · 번호 -1",
+   "output": "주스 나왔습니다!\n한 명당 1300 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "자판기 · 번호 -5",
+   "output": "콜라 나왔습니다!\n한 명당 1200 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "자판기 · 사람 수 -2",
+   "output": "콜라 나왔습니다!\n한 명당 -600 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "자판기 · 사람 수 2000",
+   "output": "콜라 나왔습니다!\n한 명당 0 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "자판기 · 사람 수 7",
+   "output": "콜라 나왔습니다!\n한 명당 171 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "자판기 · 콜라 사기",
+   "output": "콜라 나왔습니다!\n한 명당 1200 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "자판기 · 우유 + HAPPY 쿠폰",
+   "output": "우유 나왔습니다!\n한 명당 600 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "자판기 · 커피를 둘이 나눠 내기",
+   "output": "커피 나왔습니다!\n한 명당 500 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m1 답 · 번호에 「칠」",
+   "output": "숫자를 정확히 입력하세요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m1 답 · 번호에 「2.5」",
+   "output": "숫자를 정확히 입력하세요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m1 답 · 사람 수에 「둘」",
+   "output": "숫자를 정확히 입력하세요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m1 답 · 번호 7",
+   "output": "0~4번 중에서 골라 주세요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m1 답 · 번호 100",
+   "output": "0~4번 중에서 골라 주세요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m1 답 · 쿠폰 「happy」",
+   "output": "없는 쿠폰이에요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m1 답 · 쿠폰 「BONUS」",
+   "output": "없는 쿠폰이에요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m1 답 · 쿠폰 「FREE」",
+   "output": "이 쿠폰은 지금 쓸 수 없어요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m1 답 · 사람 수 0",
+   "output": "0명은 나눠 낼 수 없어요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m1 답 · 번호 칸을 비움",
+   "output": "숫자를 정확히 입력하세요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m1 답 · 번호 -1",
+   "output": "0~4번 중에서 골라 주세요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m1 답 · 번호 -5",
+   "output": "0~4번 중에서 골라 주세요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m1 답 · 사람 수 -2",
+   "output": "콜라 나왔습니다!\n한 명당 -600 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m1 답 · 사람 수 2000",
+   "output": "콜라 나왔습니다!\n한 명당 0 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m1 답 · 사람 수 7",
+   "output": "콜라 나왔습니다!\n한 명당 171 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m1 답 · 콜라 사기",
+   "output": "콜라 나왔습니다!\n한 명당 1200 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m1 답 · 우유 + HAPPY 쿠폰",
+   "output": "우유 나왔습니다!\n한 명당 600 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m1 답 · 커피를 둘이 나눠 내기",
+   "output": "커피 나왔습니다!\n한 명당 500 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 번호에 「칠」",
+   "output": "입력을 확인하세요: invalid literal for int() with base 10: '칠'\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 번호에 「2.5」",
+   "output": "입력을 확인하세요: invalid literal for int() with base 10: '2.5'\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 사람 수에 「둘」",
+   "output": "입력을 확인하세요: invalid literal for int() with base 10: '둘'\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 번호 7",
+   "output": "0~4번 중에서 골라 주세요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 번호 100",
+   "output": "0~4번 중에서 골라 주세요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 쿠폰 「happy」",
+   "output": "없는 쿠폰이에요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 쿠폰 「BONUS」",
+   "output": "없는 쿠폰이에요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 쿠폰 「FREE」",
+   "output": "이 쿠폰은 지금 쓸 수 없어요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 사람 수 0",
+   "output": "입력을 확인하세요: 사람 수는 1명 이상이어야 해요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 번호 칸을 비움",
+   "output": "입력을 확인하세요: invalid literal for int() with base 10: ''\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 번호 -1",
+   "output": "0~4번 중에서 골라 주세요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 번호 -5",
+   "output": "0~4번 중에서 골라 주세요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 사람 수 -2",
+   "output": "입력을 확인하세요: 사람 수는 1명 이상이어야 해요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 사람 수 2000",
+   "output": "입력을 확인하세요: 사람이 너무 많아요. 한 명당 0원이 돼요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 사람 수 7",
+   "output": "콜라 나왔습니다!\n한 명당 171 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 콜라 사기",
+   "output": "콜라 나왔습니다!\n한 명당 1200 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 우유 + HAPPY 쿠폰",
+   "output": "우유 나왔습니다!\n한 명당 600 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 커피를 둘이 나눠 내기",
+   "output": "커피 나왔습니다!\n한 명당 500 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "final 답 · 콜라 사기",
+   "output": "콜라 나왔습니다!\n한 명당 1200 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "final 답 · 우유 + HAPPY 쿠폰",
+   "output": "우유 나왔습니다!\n한 명당 600 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "final 답 · 커피를 둘이 나눠 내기",
+   "output": "커피 나왔습니다!\n한 명당 500 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "final 답 · 번호를 자꾸 틀리는 손님",
+   "output": "입력을 확인하세요: invalid literal for int() with base 10: '칠'\n0~4번 중에서 골라 주세요.\n0~4번 중에서 골라 주세요.\n우유 나왔습니다!\n한 명당 800 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "final 답 · 쿠폰을 자꾸 틀리는 손님",
+   "output": "없는 쿠폰이에요.\n이 쿠폰은 지금 쓸 수 없어요.\n커피 나왔습니다!\n한 명당 500 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "final 답 · 사람 수를 자꾸 틀리는 손님",
+   "output": "입력을 확인하세요: invalid literal for int() with base 10: '둘'\n입력을 확인하세요: 사람 수는 1명 이상이어야 해요.\n입력을 확인하세요: 사람 수는 1명 이상이어야 해요.\n입력을 확인하세요: 사람이 너무 많아요. 한 명당 0원이 돼요.\n입력을 확인하세요: 똑같이 나눠지지 않아요. 사람 수를 바꿔 주세요.\n콜라 나왔습니다!\n한 명당 400 원\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 번호를 자꾸 틀리는 손님",
+   "output": "입력을 확인하세요: invalid literal for int() with base 10: '칠'\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 쿠폰을 자꾸 틀리는 손님",
+   "output": "없는 쿠폰이에요.\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "m2 답 · 사람 수를 자꾸 틀리는 손님",
+   "output": "입력을 확인하세요: invalid literal for int() with base 10: '둘'\n이용해 주셔서 감사합니다.",
+   "error": null
+  },
+  {
+   "name": "예제 l5 · 나이=17",
+   "output": "내년에는 18 살이에요.\n프로그램을 마칩니다.",
+   "error": null
+  },
+  {
+   "name": "예제 l5 · 나이=-3",
+   "output": "",
+   "error": {
+    "type": "ValueError",
+    "msg": "나이는 0보다 작을 수 없습니다.",
+    "line": 3
+   }
+  },
+  {
+   "name": "예제 l5 · 나이=열일곱",
+   "output": "",
+   "error": {
+    "type": "ValueError",
+    "msg": "invalid literal for int() with base 10: '열일곱'",
+    "line": 1
+   }
+  },
+  {
+   "name": "예제 l6 · 나이=17",
+   "output": "내년에는 18 살이에요.\n프로그램을 마칩니다.",
+   "error": null
+  },
+  {
+   "name": "예제 l6 · 나이=-3",
+   "output": "다시 입력하세요 — 나이는 0보다 작을 수 없습니다.\n프로그램을 마칩니다.",
+   "error": null
+  },
+  {
+   "name": "예제 l6 · 나이=열일곱",
+   "output": "다시 입력하세요 — invalid literal for int() with base 10: '열일곱'\n프로그램을 마칩니다.",
+   "error": null
+  },
+  {
+   "name": "왜 raise A · 메뉴 번호=-1",
+   "output": "0~4번 중에서 골라 주세요.\n주스 나왔습니다!",
+   "error": null
+  },
+  {
+   "name": "왜 raise A · 메뉴 번호=2",
+   "output": "우유 나왔습니다!",
+   "error": null
+  },
+  {
+   "name": "왜 raise B · 메뉴 번호=-1",
+   "output": "0~4번 중에서 골라 주세요.",
+   "error": null
+  },
+  {
+   "name": "왜 raise B · 메뉴 번호=2",
+   "output": "우유 나왔습니다!\n한 명당 400 원",
+   "error": null
+  },
+  {
+   "name": "왜 raise B · 메뉴 번호=칠",
+   "output": "",
+   "error": {
+    "type": "ValueError",
+    "msg": "invalid literal for int() with base 10: '칠'",
+    "line": 3
+   }
+  },
+  {
+   "name": "왜 raise B · 사람 수=2",
+   "output": "0~4번 중에서 골라 주세요.",
+   "error": null
+  },
+  {
+   "name": "왜 raise B · 사람 수=-2",
+   "output": "0~4번 중에서 골라 주세요.",
+   "error": null
+  },
+  {
+   "name": "왜 raise C · 메뉴 번호=-1",
+   "output": "0~4번 중에서 골라 주세요.",
+   "error": null
+  },
+  {
+   "name": "왜 raise C · 메뉴 번호=2",
+   "output": "우유 나왔습니다!\n한 명당 400 원",
+   "error": null
+  },
+  {
+   "name": "왜 raise C · 메뉴 번호=칠",
+   "output": "입력을 확인하세요: invalid literal for int() with base 10: '칠'",
+   "error": null
+  },
+  {
+   "name": "왜 raise C · 사람 수=2",
+   "output": "0~4번 중에서 골라 주세요.",
+   "error": null
+  },
+  {
+   "name": "왜 raise C · 사람 수=-2",
+   "output": "0~4번 중에서 골라 주세요.",
+   "error": null
+  },
+  {
+   "name": "왜 raise D · 사람 수=3",
+   "output": "한 명당 400 원",
+   "error": null
+  },
+  {
+   "name": "왜 raise D · 사람 수=-2",
+   "output": "다시 입력하세요: 사람 수는 1명 이상이어야 해요.",
+   "error": null
+  },
+  {
+   "name": "왜 raise D · 사람 수=둘",
+   "output": "다시 입력하세요: invalid literal for int() with base 10: '둘'",
+   "error": null
+  },
+  {
+   "name": "다시 묻기 · 넣을 값들=17",
+   "output": "내년에는 18 살이에요.",
+   "error": null
+  },
+  {
+   "name": "다시 묻기 · 넣을 값들=열일곱, -3, 17",
+   "output": "다시 입력하세요 — invalid literal for int() with base 10: '열일곱'\n다시 입력하세요 — 나이는 0보다 작을 수 없습니다.\n내년에는 18 살이에요.",
+   "error": null
+  },
+  {
+   "name": "다시 묻기 · 넣을 값들=-1, -2, 0",
+   "output": "다시 입력하세요 — 나이는 0보다 작을 수 없습니다.\n다시 입력하세요 — 나이는 0보다 작을 수 없습니다.\n내년에는 1 살이에요.",
+   "error": null
+  },
+  {
+   "name": "확인 문제 1",
+   "output": "오류: 음수는 안 돼요\n끝",
+   "error": null
+  },
+  {
+   "name": "확인 문제 2",
+   "output": "오류: invalid literal for int() with base 10: 'abc'\n끝",
+   "error": null
+  },
+  {
+   "name": "확인 문제 3 · 보기 1",
+   "output": "",
+   "error": {
+    "type": "ValueError",
+    "msg": "1명 이상이어야 해요",
+    "line": 3
+   }
+  },
+  {
+   "name": "확인 문제 3 · 보기 2",
+   "output": "",
+   "error": {
+    "type": "ZeroDivisionError",
+    "msg": "integer division or modulo by zero",
+    "line": 4
+   }
+  },
+  {
+   "name": "확인 문제 3 · 보기 4",
+   "output": "",
+   "error": {
+    "type": "TypeError",
+    "msg": "exceptions must derive from BaseException",
+    "line": 3
+   }
+  },
+  {
+   "name": "확인 문제 4",
+   "output": "",
+   "error": {
+    "type": "ValueError",
+    "msg": "점수는 100점까지예요",
+    "line": 3
+   }
+  }
+ ]
+}
